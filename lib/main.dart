@@ -11,14 +11,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Application',
       home: Scaffold(
-        backgroundColor: Colors.black, // Add this
-        appBar: AppBar(title: const Text('Home Page')),
-        body: const Center(
-          child: Text(
-            'Hello, Flutter!',
-            style: TextStyle(color: Colors.white), // Also make text visible
+        backgroundColor: Colors.deepPurple[200],
+        body: Center(
+          child: Container(
+            height: 300,
+            width: 300,
+            decoration: BoxDecoration(
+              color: Colors.deepPurple,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            padding: EdgeInsets.all(25),
+            child: Icon(
+              Icons.favorite,
+              color: Colors.white,
+              size: 42,
+            ),
           ),
         ),
       ),
