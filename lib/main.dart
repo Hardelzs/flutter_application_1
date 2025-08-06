@@ -12,22 +12,26 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            padding: EdgeInsets.all(25),
-            child: Icon(
-              Icons.favorite,
-              color: Colors.white,
-              size: 42,
-            ),
-          ),
+        // backgroundColor: Colors.deepPurple[200],
+        // appBar: AppBar(
+        //   title: Text('Hardelz Boyz'),
+        //   backgroundColor: Colors.deepPurple,
+
+        //   elevation: 0,
+        //   leading: Icon(Icons.menu),
+        //   actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
+        // ),
+        body: ListView(
+          children: [
+            // 1st container
+            Container(width: 350, color: Colors.deepPurple),
+
+            //2nd container
+            Container(width: 350, color: Colors.deepPurple[300]),
+
+            //3rd container
+            Container(width: 350, color: Colors.deepPurple[200]),
+          ],
         ),
       ),
     );
