@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/firtspage.dart';
+import 'package:flutter_application_1/Pages/secondpage.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Firtspage(),
+      routes: {
+        '/firstpage': (context) => Firtspage(),
+        '/secondpage': (context) => Secondpage(),
+      },
     );
   }
 }

@@ -9,29 +9,35 @@ class Firtspage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("1st pager"),
-        backgroundColor: Colors.deepPurple[200],
+        backgroundColor: const Color.fromARGB(255, 84, 7, 227),
         elevation: 0,
         ),
+        drawer: Drawer(
+          backgroundColor: Colors.deepPurple[100],
+          child: Column(
+            children: [
+              DrawerHeader(
+                child: Icon(
+                  Icons.favorite,
+                  size: 48,
+                ),
+              ),
 
-      body: Center(
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.deepPurple[200],
-            foregroundColor: Colors.white,
-            padding: EdgeInsets.all(20),
+              // home page list title
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text("H O M E"),
+              ),
+
+
+              // settings list title 
+                  ListTile(
+                leading: Icon(Icons.settings),
+                title: Text("S E T T I N G S"),
+              )
+            ],
           ),
-          child: Text("Go to Second Page"),
-          onPressed: () {
-            // navigate to the second page
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => Secondpage()
-                )
-            );
-          },
         ),
-      ),
     );
   }
 }
